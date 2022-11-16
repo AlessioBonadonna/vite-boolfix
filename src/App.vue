@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderComponent />
+    <HeaderComponent @search="performSearch()" />
     <MainComponent />
   </div>
 </template>
