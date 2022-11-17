@@ -2,7 +2,7 @@
 
     <main class="pt-5">
         <div class="container">
-            <h2 class="d-block">I tuoi film</h2>
+            <h2 class="d-block"> Film</h2>
         </div>
 
         <div class="container d-flex align-items-start  scroll fixedbars">
@@ -10,7 +10,7 @@
             <CardComponent v-for="(film, index) in store.films" :key="index" :card="film" />
         </div>
         <div class="container">
-            <h2 class="d-block">Le tue serie</h2>
+            <h2 class="d-block"> Serie TV</h2>
         </div>
         <div class=" container d-flex align-items-start scroll fixedbars">
             <CardComponent v-for="(tvShow, index) in store.tvShows" :key="index" :card="tvShow" />

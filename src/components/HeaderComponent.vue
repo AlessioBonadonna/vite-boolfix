@@ -1,12 +1,12 @@
 <template>
-    <nav class="bg-black">
+    <nav class="bg-black p-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
-                <h1 class="text-danger">BoolFix</h1>
+                <img class="logo" src="../../public/img/BOOLFLIX.png" alt="logo">
             </div>
             <div>
                 <input @keyup="$emit('search')" type="text" name="" id="" class="bg-dark input-text text-white"
-                    v-model="store.quary">
+                    placeholder="Cerca" v-model="store.quary">
 
 
             </div>
@@ -32,5 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.logo {
+    width: 200px;
+}
 </style>
