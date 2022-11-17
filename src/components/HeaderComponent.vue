@@ -5,8 +5,9 @@
                 <h1 class="text-danger">BoolFix</h1>
             </div>
             <div>
-                <input type="text" name="" id="" class="bg-dark input-text" v-model="store.quary">
-                <button @click="$emit('search')">Search</button>
+                <input @keyup="$emit('search')" type="text" name="" id="" class="bg-dark input-text text-white"
+                    v-model="store.quary">
+
             </div>
         </div>
 
@@ -17,6 +18,9 @@
 <script>
 import { store } from '../data/store'
 import axios from 'axios'
+
+
+
 export default {
     data() {
         return {

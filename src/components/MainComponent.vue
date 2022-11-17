@@ -4,17 +4,20 @@
         <div class="container d-flex justify-content-center  aling-items-center ">
             <div class="row">
 
-                <div class="card  col-2 " v-for=" (film) in store.films">
+                <div class="card  col-2 " v-for=" (film) in store.films"
+                    v-bind:class="{ flipme: cardOne == 'flipped' }">
 
+                    <div class="card__face card__face--front"
+                        @mouseenter="cardOne == 'start' ? (cardOne = 'flipped') : (cardOne = 'start')"
+                        @mouseleave="cardOne == 'start' ? (cardOne = 'flipped') : (cardOne = 'start')">
+                        <div class="img-cont">
+                            <img class="img" :src="store.imagesURL + film.backdrop_path" alt="">
+                        </div>
+                    </div>
 
-                    <div class="img-cont">
-                        <img class="img" :src="store.imagesURL + film.backdrop_path" alt="">
-                    </div>
-                    <div class=" title">
-                        {{ film.title }}
-                    </div>
-                    <div class="solosulhover d-none">
-                        <div>
+                    <div class=" card__face card__face--back">
+                        <div class="kk">
+                            <h4>{{ film.title }}</h4>
                             <p>{{ film.original_language }}</p>
                             <p>{{ film.original_title }}</p>
                             <p>{{ film.overview }}</p>
@@ -28,7 +31,7 @@
 
 
             <div class="series">
-                <Series />
+
             </div>
         </div>
     </main>
@@ -43,7 +46,8 @@ import Series from './Series.vue'
 export default {
     data() {
         return {
-            store
+            store,
+            cardOne: "start",
         };
     },
     components: { FilmCard }
@@ -53,14 +57,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+main {
+    background-color: rgb(68, 67, 67);
+    color: white;
+    height: 100%;
+}
+
 .card {
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 342px;
+    background-color: rgb(68, 67, 67);
     margin: 15px;
-
     padding: 10px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
 
 
+    .card__face {
+        position: absolute;
+
+
+        color: white;
+        text-align: center;
+        font-weight: bold;
+
+        backface-visibility: hidden;
+    }
+
+    .card__face--back {
+
+        transform: rotateY(180deg);
+
+        .kk {
+            padding: 4px;
+            height: 150px;
+            overflow-y: scroll;
+        }
+
+    }
+
+
+}
+
+.flipme {
+    transform: rotateY(180deg);
 }
 
 .img-cont {
