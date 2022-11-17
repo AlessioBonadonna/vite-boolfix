@@ -8,5 +8,6 @@ export const store = reactive({
     imagesURL: "https://image.tmdb.org/t/p/w342/",
     tvURL: "https://api.themoviedb.org/3/search/tv",
     quary: '',
-    films: []
+    films: [],
+
 })
