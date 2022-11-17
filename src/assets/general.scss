@@ -9,3 +9,10 @@ body {
     color: white;
     background-color: rgb(57, 57, 57) !important;
 }
+
+::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+    height: 10px;
+    overflow: overlay
+}
