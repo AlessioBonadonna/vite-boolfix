@@ -8,7 +8,7 @@
             <h3>{{ getTitles }}</h3>
         </span>
         <span class="lingua">
-            <p>{{ card.original_language }}</p>
+            <img :src="Flag" alt="{{flag}}">
         </span>
         <div>
             <span v-for="n in 5" class="fa-star star" :class="(n <= votefx) ? 'fa-solid' : 'fa-regular'"></span>
@@ -33,6 +33,7 @@ export default {
 
         }
     },
+
     computed: {
         //
         getTitles() {
@@ -44,11 +45,33 @@ export default {
         votefx() {
             return Math.ceil(this.card.vote_average / 2);
 
+        },
+        Flag() {
+            let flag = this.card.original_language;
+            if (flag == 'en') {
+                flag = 'gb';
+            } else if (flag == 'ja') {
+                flag = 'jp';
+            } else if (flag == 'zh') {
+                flag = 'cn';
+            } else if (flag == 'ko') {
+                flag = 'kr';
+            } else if (flag == 'cs') {
+                flag = 'sk';
+            } else if (flag == 'da') {
+                flag = 'dk';
+            } else if (flag == 'xx') {
+                flag = 'mz';
+            }
+            const flagUp = flag.toUpperCase();
+            const urlFlag = `https://www.countryflagicons.com/SHINY/32/${flagUp}.png`
+            return urlFlag;
         }
-
     }
 
 }
+
+
 </script>
 
 <style lang="scss" scoped>
