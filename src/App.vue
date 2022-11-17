@@ -1,7 +1,8 @@
 <template>
   <div>
     <HeaderComponent @search="performSearch(), getseries()" />
-    <MainComponent />
+    <JumboComponent v-if="!store.quary" />
+    <MainComponent v-else />
   </div>
 </template>
 
@@ -10,9 +11,10 @@ import { store } from './data/store'
 import axios from 'axios'
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
+import JumboComponent from './components/JumboComponent.vue';
 
 export default {
-  components: { HeaderComponent, MainComponent },
+  components: { HeaderComponent, MainComponent, JumboComponent },
   data() {
     return {
       store
