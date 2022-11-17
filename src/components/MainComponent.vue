@@ -1,6 +1,6 @@
 <template>
 
-    <main class="pt-5">
+    <main class="">
         <div class="container">
             <h2 class="d-block"> Film</h2>
         </div>
@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
-    background-color: rgb(68, 67, 67);
+    background-color: rgb(32, 32, 32);
     color: white;
     height: 100%;
 }
@@ -61,5 +61,9 @@ main {
     padding-top: 20px;
     padding-bottom: 50px;
 
+}
+
+h2 {
+    margin: 0;
 }
 </style> 

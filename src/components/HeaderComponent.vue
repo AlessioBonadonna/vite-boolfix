@@ -1,7 +1,7 @@
 <template>
-    <nav class="bg-black p-3">
+    <nav class="bg-black p-1">
         <div class="container d-flex justify-content-between align-items-center">
-            <div>
+            <div class="p-1">
                 <img class="logo" src="../../public/img/BOOLFLIX.png" alt="logo">
             </div>
             <div>
