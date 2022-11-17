@@ -1,7 +1,12 @@
 <template>
 
     <main>
-        <div class="container d-flex justify-content-center  aling-items-center ">
+
+
+        <CardComponent v-for="(film, index) in store.films" :key="index" class="card" :card="film" />
+        <CardComponent v-for="(tvShow, index) in store.tvShows" :key="index" class="card" :card="tvShow" />
+
+        <!-- <div class="container d-flex justify-content-center  aling-items-center ">
             <div class="row">
 
                 <div class="card  col-2 " v-for=" (film) in store.films"
@@ -30,18 +35,20 @@
 
 
 
-            <div class="series">
+            <div class="series" v-for="(tvShow, index) in store.tvShows" key="index">
+                series
 
+                {{ tvShow.title }}
             </div>
-        </div>
+        </div> -->
     </main>
 </template>
 
 <script>
 import { store } from '../data/store';
 import axios from 'axios';
-import FilmCard from './FilmCard.vue';
-import Series from './Series.vue'
+import CardComponent from './CardComponent.vue';
+
 
 export default {
     data() {
@@ -50,7 +57,7 @@ export default {
             cardOne: "start",
         };
     },
-    components: { FilmCard }
+    components: { CardComponent }
 }
 
 

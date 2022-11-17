@@ -8,6 +8,7 @@
                 <input @keyup="$emit('search')" type="text" name="" id="" class="bg-dark input-text text-white"
                     v-model="store.quary">
 
+
             </div>
         </div>
 
