@@ -1,6 +1,6 @@
 <template>
 
-    <main class="">
+    <main class="p-4">
         <div class="container">
             <h2 class="d-block"> Film</h2>
         </div>
@@ -56,6 +56,30 @@ main {
     overflow: auto;
     display: flex;
 }
+
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    overflow: overlay
+}
+
+.scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 20px black;
+    background: rgb(83, 83, 83);
+    border-radius: 10px;
+    overflow: overlay
+}
+
+.scroll::-webkit-scrollbar-thumb {
+
+    background: rgba(113, 25, 25, 0.589);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(189, 46, 48);
+}
+
 
 .fixedbars {
     padding-top: 20px;
