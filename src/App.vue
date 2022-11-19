@@ -56,32 +56,7 @@ export default {
 
         })
     },
-    trendMovie() {
-      axios
 
-        .get(`${store.trendMovie}?api_key=${store.apiKey}`)
-        .then((res) => {
-
-          store.trendMovie = res.data.results;
-
-          console.log(res.data.results);
-          store.trendAMovie = res.data.results;
-          console.log(store.trendAMovie[1]);
-        })
-    },
-    trendMovie() {
-      axios
-
-        .get(`${store.trendTV}?api_key=${store.apiKey}`)
-        .then((res) => {
-
-          store.trendTV = res.data.results;
-
-          console.log(res.data.results);
-          store.trendATv = res.data.results;
-          console.log(store.trendATv[1]);
-        })
-    },
 
     created() {
       //chiamata api ad inizio app

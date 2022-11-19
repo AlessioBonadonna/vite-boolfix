@@ -33,7 +33,7 @@ export default {
     data() {
         return {
             store,
-            cardOne: "start",
+
         };
     },
     components: { CardComponent }

@@ -5,17 +5,24 @@
         <img class="logo-img" src="../../public/img/BOOLFLIX.png" alt="boolflix">
 
     </div>
+    <div>
+
+
+    </div>
 </template>
 
 <script>
+
 import { store } from '../data/store';
 import axios from 'axios';
+
 export default {
     data() {
         return {
             store
-        }
-    }
+        };
+    },
+
 }
 </script>
 
