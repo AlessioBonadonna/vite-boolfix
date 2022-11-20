@@ -113,7 +113,7 @@ export default {
 
         .description {
             height: 100%;
-            // width: 100%;
+
         }
     }
 
@@ -142,7 +142,7 @@ export default {
         padding-left: 0.5rem;
         padding-bottom: 0.5rem;
 
-        .title {
+        .titlefilms {
             padding: 0 0.1rem 0.3rem;
             font-size: 2rem;
             font-weight: bold;
@@ -163,15 +163,6 @@ export default {
         }
     }
 
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: all 0.5s;
-    }
 
-    .fade-enter-from,
-    .fade-leave-to {
-        opacity: 0;
-        transform: translateX(30px);
-    }
 }
 </style>

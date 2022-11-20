@@ -1,7 +1,7 @@
 <template>
     <h1 class="text-center mt-5">Inizia Subito la ricerca del tuo film o serie preferita</h1>
     <div class="jumbo-relative"></div>
-    <div class="jumbo-assolute">
+    <div class="jumbo-assolute ">
         <img class="logo-img" src="../../public/img/BOOLFLIX.png" alt="boolflix">
 
     </div>
@@ -30,7 +30,7 @@ export default {
 .logo-img {
     width: 1000px;
     position: absolute;
-    animation: moveImage 10s linear infinite;
+    animation: moveImage 5s linear infinite;
     left: -350px;
 }
 
@@ -48,6 +48,8 @@ p {
     position: absolute;
     top: 250px;
     left: 230px;
+
+    z-index: 2000;
 
 
 }

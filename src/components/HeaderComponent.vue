@@ -4,9 +4,9 @@
             <div class="p-1 d-flex">
                 <img class="logo" src="../../public/img/BOOLFLIX.png" alt="logo">
                 <div class="list-category">
-                    <ul class="d-flex list-unstyled  ms-5">
+                    <ul class="d-flex list-unstyled  ms-5 mt-3 ">
                         <li>
-                            <a href="#">Home</a>
+                            <a href=" #">Home</a>
                         </li>
                         <li>
                             <a href="#">Serie Tv</a>
